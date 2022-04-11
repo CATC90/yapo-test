@@ -22,13 +22,13 @@ npm start
 ```
 
 > Inicio del proceso
-> ![alt text](https://github.com/CATC90/yapo-test/images/npm-start.png?raw=true)
+> ![alt text](https://github.com/CATC90/yapo-test/tree/main/images/npm-start.png?raw=true)
 
 > Final del proceso
-> ![alt text](https://github.com/CATC90/yapo-test/images/finish-docker-compose.png?raw=true)
+> ![alt text](https://github.com/CATC90/yapo-test/tree/main/images/finish-docker-compose.png?raw=true)
 
 > :warning: **En ocaciones el proceso de frontend no envia los logs a la consola por lo cual no se aprecia cuando termina**: pero se puede observar el proceso desde el dashboard de docker!
-> ![alt text](https://github.com/CATC90/yapo-test/images/docker-dashboard.png?raw=true)
+> ![alt text](https://github.com/CATC90/yapo-test/tree/main/images/docker-dashboard.png?raw=true)
 
 Una ves finalizado
 El frontend se puede acceder por `http:localhost:4200/tracks`
