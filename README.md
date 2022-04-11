@@ -33,7 +33,7 @@ npm start
 Una ves finalizado
 El frontend se puede acceder por `http:localhost:4200/tracks`
 
-El backend se lenvata en el `http:localhost:3000` y expone las siguientes rutas
+El backend se levanta en el `http:localhost:3000` y expone las siguientes rutas
 
 ```
 http:localhost:3000/search_tracks?name=${artistName}
