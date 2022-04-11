@@ -16,7 +16,7 @@ Para este proyecto fueron utilizadas las siguientes dependencias del sistema.
 ```
 
 ```shell
-git clone https://github.com/CATC90@yapo-test
+git clone git@github.com:CATC90/yapo-test.git
 cd yapo-test
 npm start
 ```
