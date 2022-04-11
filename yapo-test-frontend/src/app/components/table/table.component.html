@@ -1,0 +1,33 @@
+<div *ngIf="responsiveMode; else elseBlock" ngClass="responsive-wrapper">
+  <mat-card *ngFor="let song of dataSource">
+    <div *ngFor="let fields of displayedColumns; let i = index">
+      <div ngClass="row-responsive" id="row">
+        <p>{{ fields.title }}</p>
+        <p>{{ song[fields.fieldName] }}</p>
+      </div>
+      <div *ngIf="i + 1 < displayedColumns.length">
+        <mat-divider></mat-divider>
+      </div>
+    </div>
+  </mat-card>
+</div>
+
+<ng-template #elseBlock>
+  <table
+    mat-table
+    [dataSource]="dataSource"
+    class="mat-elevation-z8"
+    id="table"
+  >
+    <ng-container *ngFor="let columnsTitle of displayedColumns">
+      <ng-container matColumnDef="{{ columnsTitle.fieldName }}">
+        <th mat-header-cell *matHeaderCellDef>{{ columnsTitle.title }}</th>
+        <td mat-cell *matCellDef="let element">
+          {{ element[columnsTitle.fieldName] }}
+        </td>
+      </ng-container>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="getColumnsName()"></tr>
+    <tr mat-row *matRowDef="let row; columns: getColumnsName()" id="row"></tr>
+  </table>
+</ng-template>

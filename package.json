@@ -1,0 +1,14 @@
+{
+  "author": {
+    "email": "catc_90@hotmail.com",
+    "name": "Carlos Trujillo Cuevas",
+    "url": "https://github.com/CATC90"
+  },
+  "name": "yapo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "docker-compose -f docker-compose.yml up --build"
+  }
+}

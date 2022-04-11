@@ -1,0 +1,31 @@
+version: "3.8"
+
+services:
+  yapo-test-backend:
+    container_name: yapo_test_dev_backend
+    image: yapo-test-dev:1.0.0
+    build:
+      context: ./yapo-test
+      target: development
+      dockerfile: ./Dockerfile
+    command: yarn start:dev
+    ports:
+      - 3000:3000
+    volumes:
+      - ./yapo-test:/usr/src/app
+      - /usr/src/app/node_modules
+    restart: unless-stopped
+  yapo-test-frontend:
+    container_name: yapo_test_dev_frontend
+    image: yapo-test-dev-front:1.0.0
+    build:
+      context: ./yapo-test-frontend
+      dockerfile: ./Dockerfile
+    command: sh -c "npm install --include=dev && yarn start"
+    ports:
+      - 4200:4200
+    working_dir: /home/node/app
+    volumes:
+      - ./yapo-test-frontend:/home/node/app
+      - ./yapo-test-frontend/node_modules:/home/node/app/node_modules
+    restart: unless-stopped

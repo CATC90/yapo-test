@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "f5a63312-c8fb-41c4-bef9-2c6d4f40b672",
+		"name": "tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "itunes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://itunes.apple.com/search?term=nightwish",
+					"protocol": "https",
+					"host": [
+						"itunes",
+						"apple",
+						"com"
+					],
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "term",
+							"value": "nightwish"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - search tracks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/search_tracks?name=radiohead",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"search_tracks"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "radiohead"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST - Favoritos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nombre_banda\": \"nightwish\",\n    \"cancion_id\": 288794607,\n\t\"usuario\" : \"carlos\",\n\t\"ranking\" : \"5/5\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/favoritos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"favoritos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,46 @@
+<div ngClass="wrapper">
+  <h1>Tracks finder</h1>
+  <mat-card>
+    <div ngClass="form-container">
+      <app-input-form
+        (onChange)="onInputChange($event)"
+        [placeholder]="'Enter your favorite artist (Ex. radiohead)'"
+        (keyup.enter)="onSearchTrack()"
+      ></app-input-form>
+      <button
+        mat-raised-button
+        color="primary"
+        id="search-button"
+        (click)="onSearchTrack()"
+        [disabled]="!artistName"
+      >
+        Search
+      </button>
+    </div>
+  </mat-card>
+
+  <div *ngIf="!!foundedSongs">
+    <div ngClass="filter-by">
+      <h2>Artist - {{ currentArtist }}</h2>
+      <mat-form-field appearance="fill">
+        <mat-label>Filter by album</mat-label>
+        <mat-select
+          disableRipple
+          (selectionChange)="selectFilter($event)"
+          value="{{ filterAlbum }}"
+        >
+          <mat-option value="all">All</mat-option>
+          <mat-option
+            *ngFor="let album of foundedSongs.albumes"
+            value="{{ album }}"
+            >{{ album }}</mat-option
+          >
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <app-table
+      [displayedColumns]="getTableHead()"
+      [dataSource]="(filteredSongs || foundedSongs)?.canciones"
+    ></app-table>
+  </div>
+</div>
