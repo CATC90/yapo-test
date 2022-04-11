@@ -22,13 +22,13 @@ npm start
 ```
 
 > Inicio del proceso
-> ![alt text](https://github.com/CATC90/yapo-test/tree/main/images/npm-start.png?raw=true)
+> ![npm start](https://github.com/CATC90/yapo-test/blob/main/images/npm-start.png?raw=true)
 
 > Final del proceso
-> ![alt text](https://github.com/CATC90/yapo-test/tree/main/images/finish-docker-compose.png?raw=true)
+> ![npm start finish](https://github.com/CATC90/yapo-test/blob/main/images/finish-docker-compose.png?raw=true)
 
 > :warning: **En ocaciones el proceso de frontend no envia los logs a la consola por lo cual no se aprecia cuando termina**: pero se puede observar el proceso desde el dashboard de docker!
-> ![alt text](https://github.com/CATC90/yapo-test/tree/main/images/docker-dashboard.png?raw=true)
+> ![docker dashboard](https://github.com/CATC90/yapo-test/blob/main/images/docker-dashboard.png?raw=true)
 
 Una ves finalizado
 El frontend se puede acceder por `http:localhost:4200/tracks`
@@ -40,7 +40,7 @@ http:localhost:3000/search_tracks?name=${artistName}
 http:localhost:3000/favoritos?name=${artistName}
 ```
 
-> :alert: Se incluye documento de postman para probar backend.
+> ❗ Se incluye documento de postman para probar backend.
 
 ### Levantar frotend
 
